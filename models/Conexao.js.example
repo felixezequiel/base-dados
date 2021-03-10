@@ -1,0 +1,65 @@
+const ora = require("oracledb")
+ora.autoCommit = true
+class Conexao {
+	async separacaoEcommerce() {
+		let conexao
+		try {
+			conexao = await ora.getConnection({
+				user: 'user',
+				password: 'pwd',
+				connectString: 'host:port/consinco'
+			})
+		}
+		catch (erro) { }
+		finally {
+			await conexao.execute(`alter session set nls_date_format = 'DD/MM/YYYY'`)
+			return conexao
+		}
+	}
+	async separacaoEcommerceTst() {
+		let conexao
+		try {
+			conexao = await ora.getConnection({
+				user: 'user',
+				password: 'pwd',
+				connectString: 'host:port/consinco'
+			})
+		}
+		catch (erro) { }
+		finally {
+			await conexao.execute(`alter session set nls_date_format = 'DD/MM/YYYY'`)
+			return conexao
+		}
+	}
+	async consinco() {
+		let conexao
+		try {
+			conexao = await ora.getConnection({
+				user: 'user',
+				password: 'pwd',
+				connectString: 'host:port/consinco'
+			})
+		}
+		catch (erro) { }
+		finally {
+			await conexao.execute(`alter session set nls_date_format = 'DD/MM/YYYY'`)
+			return conexao
+		}
+	}
+	async consincoTst() {
+		let conexao
+		try {
+			conexao = await ora.getConnection({
+				user: 'user',
+				password: 'pwd',
+				connectString: 'host:port/consinco'
+			})
+		}
+		catch (erro) { }
+		finally {
+			await conexao.execute(`alter session set nls_date_format = 'DD/MM/YYYY'`)
+			return conexao
+		}
+	}
+}
+module.exports = Conexao;

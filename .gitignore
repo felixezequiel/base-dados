@@ -1,0 +1,4 @@
+models/Conexao.js
+node_modules
+package-lock.json
+out.log

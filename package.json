@@ -1,0 +1,21 @@
+{
+  "name": "consultas-base-dados",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "forever start --minUptime 1000 --spinSleepTime 1000 -o out.log index.js"
+  },
+  "author": "Felix Ezequiel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "forever": "^3.0.2",
+    "oracledb": "^5.0.0",
+    "socket.io": "^3.1.2"
+  }
+}
